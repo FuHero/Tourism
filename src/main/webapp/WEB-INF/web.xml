@@ -14,7 +14,7 @@
 	
 	<servlet>
         <servlet-name>Spring MVC</servlet-name>
-        <servlet-class>cn.magicbeans.tourism.PrimaryDispatcherServlet</servlet-class>
+        <servlet-class>cn.magicbeans.tourism.DefaultDispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:spring-mvc.xml</param-value>

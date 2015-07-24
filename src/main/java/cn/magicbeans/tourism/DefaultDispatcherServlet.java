@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.DispatcherServlet;
 
-public class PrimaryDispatcherServlet extends DispatcherServlet {
+public class DefaultDispatcherServlet extends DispatcherServlet {
 	
 	private static final long serialVersionUID = 5282108417500057651L;
 	
