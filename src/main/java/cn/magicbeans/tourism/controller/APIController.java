@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
 
 import cn.magicbeans.tourism.model.IRequest;
+import cn.magicbeans.tourism.model.impl.Response;
 import cn.magicbeans.tourism.parser.IRequestParser;
 
 @Controller
@@ -19,14 +20,22 @@ public class APIController {
 	private IRequestParser requestParser;
 	
 	@RequestMapping(value="/user")
-	public @ResponseBody String userOperate (WebRequest web, HttpServletResponse response) {
+	public @ResponseBody String userOperate (WebRequest web, HttpServletResponse res) {
 		
-		@SuppressWarnings("unused")
 		IRequest request = null;
-		
 		request = requestParser.parse(web);
-		
+		Response response = processRequest(request);
 		return "";
+	}
+	
+	protected Response processRequest (IRequest request) {
+		Response response = new Response(Response.STATUS_FAILED_PARAMETERCHECK);
+		try {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return response;
 	}
 
 }
